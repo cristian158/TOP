@@ -21,7 +21,7 @@ h1{
 li{
   list-style-type: none;
 }
-button{
+.intro-button{
   background-color: $color-btn;
   padding: .3rem 2rem;
   margin: 1rem auto;
@@ -39,7 +39,6 @@ button{
   width: 50%;
   display: flex;
   justify-content:flex-end;
-
 }
 
 .container{
@@ -51,13 +50,13 @@ button{
 }
 
 section{
-  padding: 1rem;
   justify-content: center;
   align-items: center;
 }
 
 .nav {
   max-height: 3em;
+  padding: 1rem;
   background-color: $color-dark;
   color: $color-txt;
   display: flex;
@@ -97,7 +96,7 @@ h2{
 }
 .info-section{
   padding: 1rem 0 2rem 0;
-  
+
 
 }
 .info-container{
@@ -118,7 +117,7 @@ h2{
   img{
     width: 125px;
     height:125px;
-    border: 3px blue solid ;
+    border: 3px lightblue solid;
     border-radius: 8%;
 
   }
@@ -155,4 +154,49 @@ h2{
 }
 blockquote{
   font-size: 36px;
+}
+
+
+// SIGNUP
+
+.signup-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem;
+}
+.signup-container{
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 2rem 5rem;
+  background-color: $color-btn;
+  color: white;
+}
+.signup-button{
+  background-color: $color-btn;
+  padding: .3rem 2rem;
+  margin-left: 10rem;
+  border-radius: 10%;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border: 2px solid white;
+}
+.signup_text{
+  left: 0px;
+}
+
+
+// FOOTER
+
+footer{
+  background-color: $color-dark;
+  color: $color-txtb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
