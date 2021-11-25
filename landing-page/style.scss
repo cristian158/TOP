@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap');
+
+
+$color-dark: #1f2937;
+$color-txt: #f9faf8;
+$color-txtb: #e5e7eb;
+$color-btn: #3882f6;
+
+*{
+  margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: .8em;
+}
+h1{
+  display: block;
+  font-size: 2.5rem;
+}
+li{
+  list-style-type: none;
+}
+button{
+  background-color: $color-btn;
+  padding: .3rem 2rem;
+  margin: 1rem auto;
+  border-radius: 10%;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.left{
+  width: 50%;
+}
+
+.right{
+  width: 50%;
+  display: flex;
+  justify-content:flex-end;
+
+}
+
+.container{
+  display: flex;
+  width: 70%;
+  margin: auto;
+  align-items: center;
+  gap: 3rem;
+}
+
+section{
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  max-height: 3em;
+  background-color: $color-dark;
+  color: $color-txt;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .nav_links{
+    ul{
+      display: flex;
+      gap: 1.3rem;
+    }
+  }
+}
+
+
+
+// INTRO
+
+.intro-section{
+  background-color: $color-dark;
+  display: flex;
+  flex: 1 1 auto;
+  padding: 6rem 1rem;
+}
+.left_title{
+  color: $color-txt;
+}
+.left_description{
+  color: $color-txtb;
+  font-size: 1rem;
+}
+
+
+
+// INFO
+h2{
+  margin-bottom: 1rem;
+}
+.info-section{
+  padding: 1rem 0 2rem 0;
+  
+
+}
+.info-container{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+.info_title{
+  font-size: 1.5rem;
+}
+.info_gallery{
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 6rem;
+  img{
+    width: 125px;
+    height:125px;
+    border: 3px blue solid ;
+    border-radius: 8%;
+
+  }
+}
+.gallery-element{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p{
+    margin: auto 2rem;
+  }
+}
+
+
+// QUOTE
+
+.quote-section{
+  background-color: $color-txtb;
+  padding: 4rem;
+}
+.quote-container{
+  width: 60%;
+  margin: auto;
+  align-items: center;
+  padding: 2rem 1rem;
+  font-style: italic;
+}
+.quote-container p{
+  text-align: right;
+  margin-right: 2rem;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+}
+blockquote{
+  font-size: 36px;
+}
