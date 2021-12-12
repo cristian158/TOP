@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		// add function Extended Version
+			function add(num){
+				num += 7;
+				return num;
+			}
+			console.log(add(4));
+		// add function Arrow Version
+			let addb = num => num+=7;
+			console.log(addb(95));
+		///////////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////////
+		// mult function Extended Version
+			function mult(a,b){
+				return (a*b);
+			}
+			console.log(mult(3,4));
+		// mult function Arrow Version
+			let multb = (a,b) => a*b;
+			console.log(multb(2,9));
+		///////////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////////
+		// upFirst function Extended Version
+			function upFirst(string){
+				// slice from [1]
+				newString = string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+				return newString;
+			}
+			console.log(upFirst('chala Con QUeso'));
+		// upFirst function arrow Version
+			let upFirstb = string => string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+			console.log(upFirstb('antonella has Saturane'));
+		///////////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////////
+		// lastChar Extended Version
+			function lastChar(string){
+				newString = string.slice(-1);
+				return newString;
+			}
+			console.log(lastChar('AutonomASIA'));
+		// lastCharb Arrow Version
+			let lastCharb = string => newString = string.slice(-1);
+			console.log(lastCharb('Sinfolor Calerinta'));
+		</script>
+	</body>
+</html>

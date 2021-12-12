@@ -82,17 +82,21 @@
 // //        FUNCTIONS         //
 // //////////////////////////////
 //
+//
 // // Built-in Functions
+//
 // const someTxt = 'One random string';
-// const newTxt = someTxt.replace('random', 'defined');
+// const newTxt = someTxt.replace('random', 'defined'); // replace string from the const, 2 arguments, returns new string
 // console.log(newTxt);
 //
 // const anArray = ['This', 'has', 'no', 'meaning', '!!!'];
-// const aString = anArray.join(' ') // char in '': words separator
+// const aString = anArray.join(' ') // char in '': parameter used as words separator so if there is none, comma is used; returns new string
 // console.log(aString);
 //
-// const aNumb = Math.random();
+// const aNumb = Math.random(); // generates random number 0-1 excluding 1, returns the number
 // console.log(aNumb);
+//
+// Math.floor(Math.random() * 10); // Returns a random integer from 0 to 9:
 //
 //
 // // Methods
@@ -109,12 +113,17 @@
 //
 //
 // // Default Parameters
+// // parameters: variables listed when declaring the functiom
+// // arguments: values passed to the function when it's called
+//
 // function hello(name='Chris') {
 //   console.log(`Hello ${name}!`);
 // }
 // hello('Ari'); // Hello Ari!
-// hello();      // default parameter Hello Chris!
+// hello();      // Hello Chris! (default parameter)
 //
+//
+// // Anonymous Function
 //
 // // function(event) is Anonymous Function cause has no name
 // // addEventListener('eventToListen', 'functionToRunWhenListened')
@@ -127,3 +136,144 @@
 // // Instead of function(event), (event) =>:
 // textBox.addEventListener('keydown', (event) => { console.log(`You pressed "${event.key}".`); });
 // // in this function curly brackets {} can be omitted cause only one line
+//
+//
+// // Arrow Functiom
+//
+// // we transform this:
+// let func = function(arg1, ..., argN) {
+//	return expression;
+//}
+// // into this:
+// let func = (arg1, ..., argN) => expression // create funct, accepts args, evaluate expression
+//
+// // and this
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes();
+//   else no();
+// }
+// ask(
+//   "Do you agree?",
+//   function() { alert("You agreed."); },
+//   function() { alert("You canceled the execution."); }
+// );
+// // into this
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes();
+//   else no();
+// }
+// ask(
+//   "Do you agree?",
+//   () => alert("You agreed."),
+//   () => alert("You canceled the execution.")
+// );
+
+// // example 1
+// let sum = (a,b) => a+b;	// we can omit the parantheses if there is only one argument
+// sum(1,2);				// 3
+//
+// // example 2
+// // if there are no arguments, there should be empty parantheses
+// let sayHi = () => alert("Hello!");
+// sayHi();		// output "Hello!"
+//
+// // example 3
+// let age = prompt("What is your age?", 18);	// prompts message asking for age input
+// let welcome = (age < 18) ?
+//   () => alert('Hello') :					// if < 18
+//   () => alert("Greetings!");				// if > 18
+// welcome();
+//
+// // Multiline Arrow Functions
+// let sum = (a, b) => {  // the curly brace opens a multiline function
+//   let result = a + b;
+//   return result; // if we use curly braces, then we need an explicit "return"
+// };
+// alert( sum(1, 2) ); // 3
+
+
+
+
+// // Outer Variables
+//
+// // A function can access and modify an outer variable
+//
+// let userName = 'John';
+//
+// function showMessage() {
+//   userName = "Bob"; // (1) changed the outer variable
+//	// let userName = "Bob"; declares a local variable, and if called outside this function, userName returns 'John'
+//   let message = 'Hello, ' + userName;
+//   alert(message);
+// }
+// alert( userName ); // John before the function call
+// showMessage();
+// alert( userName ); // Bob, the value was modified by the function
+//
+// // The outer variable is only used if there’s no local one.
+//
+//
+// // rewrite this function
+//function checkAge(age) {
+//   if (age > 18) {
+//     return true;
+//   } else {
+//     return confirm('Did parents allow you?');
+//   }
+// }
+//
+// // using ?
+//function checkAge(age){
+//	return (age > 18) ? true : confirm('Did parents allow you?');
+//}
+//
+// // using ||
+//function checkAge(age){
+//	return (age>18) || confirm ('Did parents allow you?');
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
