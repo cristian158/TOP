@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// Understand the Problem
+			// Plan (does it need gui?)
+			// Pseudo Code: writing in plain english
+			// Divide and Conquer
+			// 1. Get user's input, store it and parse it
+			let answer = parseInt(prompt('Enter number: '));
+			// 2. Loop from 1 to user's nr
+			for (let i = 1; i<=answer; i++){
+
+				if(i%3===0 && i%5===0){		// 5. If i % 3 and i % 5, print FizzBuzz
+					console.log('FizzBuzz');
+				} else if (i%3===0){		// 3. if i % 3, print Fizz
+					console.log('Fizz');
+				} else if (i%5===0){			// 4. if i % 5, print Buzz
+					console.log('Buzz');
+				} else {
+					console.log(i);
+				}
+			}
+		</script>
+	</body>
+</html>

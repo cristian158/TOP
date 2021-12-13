@@ -190,10 +190,8 @@
 //   return result; // if we use curly braces, then we need an explicit "return"
 // };
 // alert( sum(1, 2) ); // 3
-
-
-
-
+//
+//
 // // Outer Variables
 //
 // // A function can access and modify an outer variable
@@ -234,22 +232,24 @@
 //
 //
 //
+/////////////////////////////////
+//           ERRORS            //
+/////////////////////////////////
 //
 //
+// // Syntax Error //
+// // Code not written correctly. Missing parentheses, etc
 //
+// // Reference Error //
+// // When variable called does not exist
 //
+// // Type Error //
+// // operand or argument is incompatible with operator or function
+// // attempt to modify value that cannot be changed
+// // attempt to use a value inappropriately
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// // WARNINGS
+// // Provide insight on potential problems, more informational
 //
 //
 //
