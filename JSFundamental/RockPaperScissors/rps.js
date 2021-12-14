@@ -4,20 +4,36 @@ function computerPlay(){
 	const choice = array[Math.floor(Math.random()*3)];
 	return choice;
 }
-console.log(computerPlay());
 
 function playerPlay(){
 	const weapon = prompt('Choose Weapon');
 	return weapon;
 }
 
-playerPlay();
+const pc = computerPlay();
+const player = playerPlay();
 
 function playRound(playerSelection, computerSelection){
-
+	if (playerSelection == 'Rock' && computerSelection == 'Rock'){
+		alert('Tie!');
+	} else if (playerSelection == 'Rock' && computerSelection == 'Paper'){
+		alert('PC Wins!');
+	} else if (playerSelection == 'Rock' && computerSelection == 'Scissors'){
+		alert('Player Wins!');
+	}
 }
 
+// if (choice == 'Rock' && weapon == 'Rock'){
+// 	alert('tie');
+// }
+
+console.log(player);
+console.log(pc);
+// const game = 0;
+// while (game )
+playRound(player, pc);
 
 
+/////////////////////////////////////////////////////////
 // lowercase user input
-// 
+// do while loop to make 5 matches to win the whole game
