@@ -1,11 +1,8 @@
-// no sé si son necesarias
-const pc = computerPlay();
-const player = playerPlay();
-
 // arrays to keep score
-// how to push result to arrays and keep them
 const playerScore = [];
 const pcScore = [];
+
+
 
 // pc election
 function computerPlay(){
@@ -13,7 +10,7 @@ function computerPlay(){
 	const array = ['Rock', 'Paper', 'Scissors']
 	const choice = array[Math.floor(Math.random()*3)];
 	pcScore.push(choice);
-	// return choice;
+	return choice;
 	// return pcScore;
 }
 
@@ -24,8 +21,7 @@ function playerPlay(){
 	return weapon;
 }
 
-
-
+// round
 function playRound(playerSelection, computerSelection){
 	if (playerSelection == 'Rock' && computerSelection == 'Rock'){
 		alert('Tie!');
@@ -33,34 +29,35 @@ function playRound(playerSelection, computerSelection){
 		alert('PC Wins!');
 	} else if (playerSelection == 'Rock' && computerSelection == 'Scissors'){
 		alert('Player Wins!');
+	} else if (playerSelection == 'Paper' && computerSelection == 'Rock'){
+		alert('Player Wins!!');
+	} else if (playerSelection == 'Paper' && computerSelection == 'Paper'){
+		alert('Tie!');
+	} else if (playerSelection == 'Paper' && computerSelection == 'Scissors'){
+		alert('PC Wins!');
+	} else if (playerSelection == 'Scissors' && computerSelection == 'Rock'){
+		alert('Pc Wins!');
+	} else if (playerSelection == 'Scissors' && computerSelection == 'Paper'){
+		alert('Player Wins!');
+	} else if (playerSelection == 'Scissors' && computerSelection == 'Scissors'){
+		alert('Tie!');
 	} else {
 		alert('Bruh');
 	}
 }
 
-
-const pc1 = computerPlay();
-const player1 = playerPlay();
-
-
+// no sé si son necesarias
+const pc = computerPlay();
+const player = playerPlay();
 
 
-// arrays!!!
-
-
-
-
+playRound(player, pc);
 
 console.log(player);
 console.log(pc);
-console.log(player1);
-console.log(pc1);
+console.log(playerScore);
+console.log(pcScore);
 
-playRound(player, pc);
-playRound(player1, pc1);
-// function game(){
-// }
-// game();
-/////////////////////////////////////////////////////////
-// lowercase user input
-// do while loop to make 5 matches to win the whole game
+for (let round = 0; round < 6; round++){
+
+}
