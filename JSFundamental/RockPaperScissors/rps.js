@@ -1,12 +1,13 @@
-// arrays to keep score
+// arrays to keep choices made
 const playerChoice = [];
 const pcChoice = [];
 
+// counters to keep score
 // i used const and didn't work
 let playerScore = 0;
 let pcScore = 0;
 
-// pc election
+// pc election function
 function computerPlay(){
 	// random return rock paper scissors
 	const array = ['Rock', 'Paper', 'Scissors']
@@ -15,14 +16,14 @@ function computerPlay(){
 	return choice;
 }
 
-// player election
+// player election function
 function playerPlay(){
 	const weapon = prompt('Choose Weapon');
 	playerChoice.push(weapon);
 	return weapon;
 }
 
-// round
+// match
 function playRound(playerSelection, computerSelection){
 	if (playerSelection == 'Rock' && computerSelection == 'Rock'){
 		alert('Tie!');
@@ -53,22 +54,32 @@ function playRound(playerSelection, computerSelection){
 	}
 }
 
-
-playRound(computerPlay(), playerPlay());
-playRound(computerPlay(), playerPlay());
-playRound(computerPlay(), playerPlay());
-playRound(computerPlay(), playerPlay());
-playRound(computerPlay(), playerPlay());
-
-
-
-
-
-for (let round = 0; round < 6; round++){
-
+function result(){
+	if (playerScore > pcScore){
+		alert('U badass!!');
+	} else if (playerScore < pcScore){
+		alert('Randomness got u.');
+	} else {
+		alert('In the end everybody dies')
+	}
 }
 
 
+playRound(computerPlay(), playerPlay());
+playRound(computerPlay(), playerPlay());
+playRound(computerPlay(), playerPlay());
+playRound(computerPlay(), playerPlay());
+playRound(computerPlay(), playerPlay());
+result();
+
+
 ///////////////////////////////////////////////////////////////
+// ################ TO DO ################
+// - Loop for match
+// - simplify everything
+// - clean
+
+///////////////////////////////////////////////////////////////
+// ################ NOTES ################
 // When pressed 'Ok' on the prompt, result is "" in array
 // When pressed 'Cancel', result is null
