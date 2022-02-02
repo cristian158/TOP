@@ -1,83 +1,103 @@
-// arrays to keep choices made
-const playerChoice = [];
-const pcChoice = [];
+const config = {
+	rounds: 5,
 
-// counters to keep score
-// i used const and didn't work
-let playerScore = 0;
-let pcScore = 0;
+	rules: {
+		rock: {
+			rock: 'tie',
+			paper: 'loss',
+			scissors: 'win',
+		},
+		paper: {
+			rock: 'loss',
+			paper: 'tie',
+			scissors: 'win',
+		},
+		scissors: {
+			rock: 'loss',
+			paper: 'win',
+			scissors: 'tie',
+		},
+	},
+
+	messages: {
+		tie: 'Tie!',
+		win: 'Player Wins!',
+		loss: 'PC Wins!',
+	},
+}
+
+
+const main = () => {
+	// arrays to keep choices made
+	const playerChoiceList = []
+	const pcChoiceList = []
+
+	// counters to keep score
+	// i used const and didn't work
+	let playerScore = 0
+	let pcScore = 0
+
+	for (let i = 0; i < config.rounds; ++i) {
+		const
+			playerChoice = playerPlay(),
+			computerChoice = computerPlay(),
+			result = playRound(playerChoice, computerChoice)
+
+		console.log(playerChoice, computerChoice)
+
+		pcChoiceList.push(playerChoice)
+		playerChoiceList.push(computerChoice)
+
+		if (result == 'error') {
+			alert('Bruh!')
+			--i
+		} else if (result == 'win')
+			playerScore++
+		else if (result == 'loss')
+			pcScore++
+
+		alert(config.messages[result])
+	}
+
+	if (playerScore > pcScore)
+		alert('U badass!!')
+	else if (playerScore < pcScore)
+		alert('Randomness got u.')
+	else
+		alert('In the end everybody dies')
+
+	console.log(playerChoiceList, pcChoiceList)
+}
 
 // pc election function
-function computerPlay(){
+const computerPlay = () => {
 	// random return rock paper scissors
-	const array = ['Rock', 'Paper', 'Scissors']
-	const choice = array[Math.floor(Math.random()*3)];
-	pcChoice.push(choice);
-	return choice;
+	const array = ['rock', 'paper', 'scissors']
+	const choice = array[Math.floor(Math.random()*3)]
+	return choice
 }
 
 // player election function
-function playerPlay(){
-	const weapon = prompt('Choose Weapon');
-	playerChoice.push(weapon);
-	return weapon;
-}
+const playerPlay = () =>
+	prompt('Choose Weapon') || ''
 
 // match
-function playRound(playerSelection, computerSelection){
-	if (playerSelection == 'Rock' && computerSelection == 'Rock'){
-		alert('Tie!');
-	} else if (playerSelection == 'Rock' && computerSelection == 'Paper'){
-		alert('PC Wins!');
-		pcScore++;
-	} else if (playerSelection == 'Rock' && computerSelection == 'Scissors'){
-		alert('Player Wins!');
-		playerScore++;
-	} else if (playerSelection == 'Paper' && computerSelection == 'Rock'){
-		alert('Player Wins!!');
-		playerScore++;
-	} else if (playerSelection == 'Paper' && computerSelection == 'Paper'){
-		alert('Tie!');
-	} else if (playerSelection == 'Paper' && computerSelection == 'Scissors'){
-		alert('PC Wins!');
-		pcScore++;
-	} else if (playerSelection == 'Scissors' && computerSelection == 'Rock'){
-		alert('Pc Wins!');
-		pcScore++;
-	} else if (playerSelection == 'Scissors' && computerSelection == 'Paper'){
-		alert('Player Wins!');
-		playerScore++;
-	} else if (playerSelection == 'Scissors' && computerSelection == 'Scissors'){
-		alert('Tie!');
-	} else {
-		alert('Bruh');
-	}
+const playRound = (playerSelection, computerSelection) => {
+	const result =
+		(config.rules[playerSelection.toLowerCase()] || {})[computerSelection.toLowerCase()]
+
+	if (!result)
+		return 'error'
+
+	return result
 }
 
-function result(){
-	if (playerScore > pcScore){
-		alert('U badass!!');
-	} else if (playerScore < pcScore){
-		alert('Randomness got u.');
-	} else {
-		alert('In the end everybody dies')
-	}
-}
-
-
-playRound(computerPlay(), playerPlay());
-playRound(computerPlay(), playerPlay());
-playRound(computerPlay(), playerPlay());
-playRound(computerPlay(), playerPlay());
-playRound(computerPlay(), playerPlay());
-result();
+main()
 
 
 ///////////////////////////////////////////////////////////////
 // ################ TO DO ################
-// - Loop for match
 // - simplify everything
-// - clean
 
 ///////////////////////////////////////////////////////////////
 // ################ NOTES ################
