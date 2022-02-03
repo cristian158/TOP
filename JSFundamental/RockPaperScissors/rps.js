@@ -1,3 +1,14 @@
+//
+//#########################
+//##  CODE TELLS U HOW   ##
+//## COMMENTS TELL U WHY ##
+//#########################
+//
+//#####################
+//## ARROZ CON HUEVO ##
+//#####################
+
+
 // arrays to keep choices made
 const playerChoice = []
 const pcChoice = []
