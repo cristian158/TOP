@@ -93,7 +93,7 @@
 // const aString = anArray.join(' ') // char in '': parameter used as words separator so if there is none, comma is used; returns new string
 // console.log(aString);
 //
-// const aNumb = Math.random(); // generates random number 0-1 excluding 1, returns the number
+// const aNumb = Math.random(); // generate random number 0-1 excluding 1, return the number
 // console.log(aNumb);
 //
 // Math.floor(Math.random() * 10); // Returns a random integer from 0 to 9:
@@ -137,48 +137,14 @@
 // textBox.addEventListener('keydown', (event) => { console.log(`You pressed "${event.key}".`); });
 // // Instead of function(event), (event) =>:
 // // in this function curly brackets {} can be omitted cause only one line
-<<<<<<< HEAD
-
+//
+//
 // Scope
-
+//
 // Global Scope
 // vars defined inside a function won't be output if invoked from outside, they be undefined
 // see example at index.html
 // if output from inside the function, yes
-//
-//
-//
-//
-// ////////////////////////////// 
-// //         ARRAYS           //
-// //////////////////////////////
-//
-// // Are a special kind of object,
-// // Objects use NAMES to access its items
-// // Arrays use NUMBERS indexed from 0
-//
-// const cars = ['Saab', 'Volvo', 'BMW']
-// const cars = new Array('Saab', 'Volvo', 'BMW')
-// let car = cars[cars.length - 1] 			// car = 'BMW'
-//
-// // To change value of 'Volvo'
-// cars[1] = 'Opel'
-//
-// // To access full array in HTML
-// document.getElementById('demo').innerHTML = cars;
-//
-// // Arrays can have objects, functions and arrays within
-// myArray[0] = Date.now;
-// myArray[1] = myFunction;
-// myArray[2] = myCars;
-// 
-// // Arrays have lots of properties
-//
-//
-//
-// const points = [40]		// create array with 1 element
-// const points = new Array(40) // create array with 40 undefined elements
-=======
 //
 //
 // // Arrow Functiom
@@ -210,7 +176,7 @@
 //   () => alert("You agreed."),
 //   () => alert("You canceled the execution.")
 // );
-
+//
 // // example 1
 // let sum = (a,b) => a+b;	// we can omit the parantheses if there is only one argument
 // sum(1,2);				// 3
@@ -253,7 +219,6 @@
 //
 // // The outer variable is only used if there’s no local one.
 //
-//
 // // rewrite this function
 //function checkAge(age) {
 //   if (age > 18) {
@@ -272,6 +237,7 @@
 //function checkAge(age){
 //	return (age>18) || confirm ('Did parents allow you?');
 //}
+//
 //
 //
 //
@@ -297,27 +263,100 @@
 //
 //
 //
+// //////////////////////////////
+// //         ARRAYS           //
+// //////////////////////////////
+//
+// // Are a special kind of object,
+// // Objects use NAMES to access its items
+// // Arrays use NUMBERS indexed from 0
+//
+// const cars = ['Saab', 'Volvo', 'BMW']
+// const cars = new Array('Saab', 'Volvo', 'BMW')
+// let car = cars[cars.length - 1] 			// car = 'BMW'
+//
+// // To change value of 'Volvo'
+// cars[1] = 'Opel'
+//
+// // To access full array in HTML
+// document.getElementById('demo').innerHTML = cars;
+//
+// const points = [40]		// create array with 1 element
+// const points = new Array(40) // create array with 40 undefined elements
+//
+// // Arrays can have objects, functions and arrays within
+// myArray[0] = Date.now;
+// myArray[1] = myFunction;
+// myArray[2] = myCars;
+//
+// // Arrays have lots of properties
+// let length = myArray.length
+//
+// // and Methods
+// document.getElementById('demo').innerHTML = myArray.toString();
+//
+// document.getElementById('femo').innerHTML = myArray.join(' * ');
+// 
+// let poppedArray = myArray.pop()
+//
+// let fruits = fruitList.push('Neptune');
+// 
+// fruits.shift();				// remove 1st item, shift the rest
+//
+// fruits.unshift('Polenta');			// add new item at start 
 //
 //
 //
 //
+// ////////////////////////////////
+// //           LOOPS		///
+// ////////////////////////////////
 //
->>>>>>> ecc355c912d3526edfbd658dff25fbe31f9d1c9e
+// //// map()
+// 
+// function hastaAbajo(string) {
+// 	return string.toLowerCase();
+// }
+// const cats = ['LiOn', 'jaGuaR', 'Tiger', 'leOParD']
+// const lowerCats = cats.map(hastaAbajo)
+// console.log(lowerCats) 			// ['lion', 'jaguar', 'tiger', 'leopard']
+//
+// // call function once per item, add return value to a new array, return the array
+//
+// 
+// //// filter()
+// // test each item in collection, create new one only with matches
+//
+// function lCat(cat) {
+//	return cat.startsWith('L')
+// }
+// const cats = ['LiOn', 'jaGuaR', 'Tiger', 'leOParD']
+// const filtered = cats.filter(lCat);
+// console.log(filtered) 			// ['LiOn', 'leOParD']
 //
 //
+// //// for...of
+//
+// const animals = ['tortoise', 'lion', 'dog']
+// for (const animal of animals) {
+// 	console.log(animal)
+// }
+//
+// //// for loop
+// // for (counter; condition; final code)
+// 
+// const animals = ['tortoise', 'lion', 'dog']
+// for (let i = 0; i < animals.length; i++){
+//	console.log(aniamls[i])
+// }
 //
 //
+// // Exit loops with Break
 //
+// // Skip iterations with continue
 //
+// // while
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// // do...while
 //
 //
