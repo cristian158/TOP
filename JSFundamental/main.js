@@ -100,6 +100,7 @@
 //
 //
 // // Methods
+//  like querySelector() --> element = document.querySelector(selectors);
 //
 // const person = {
 //   firstName: "John",
@@ -133,9 +134,51 @@
 //
 //
 // // Arrow functions alternative to Anonymous
-// // Instead of function(event), (event) =>:
 // textBox.addEventListener('keydown', (event) => { console.log(`You pressed "${event.key}".`); });
+// // Instead of function(event), (event) =>:
 // // in this function curly brackets {} can be omitted cause only one line
+<<<<<<< HEAD
+
+// Scope
+
+// Global Scope
+// vars defined inside a function won't be output if invoked from outside, they be undefined
+// see example at index.html
+// if output from inside the function, yes
+//
+//
+//
+//
+// ////////////////////////////// 
+// //         ARRAYS           //
+// //////////////////////////////
+//
+// // Are a special kind of object,
+// // Objects use NAMES to access its items
+// // Arrays use NUMBERS indexed from 0
+//
+// const cars = ['Saab', 'Volvo', 'BMW']
+// const cars = new Array('Saab', 'Volvo', 'BMW')
+// let car = cars[cars.length - 1] 			// car = 'BMW'
+//
+// // To change value of 'Volvo'
+// cars[1] = 'Opel'
+//
+// // To access full array in HTML
+// document.getElementById('demo').innerHTML = cars;
+//
+// // Arrays can have objects, functions and arrays within
+// myArray[0] = Date.now;
+// myArray[1] = myFunction;
+// myArray[2] = myCars;
+// 
+// // Arrays have lots of properties
+//
+//
+//
+// const points = [40]		// create array with 1 element
+// const points = new Array(40) // create array with 40 undefined elements
+=======
 //
 //
 // // Arrow Functiom
@@ -259,6 +302,7 @@
 //
 //
 //
+>>>>>>> ecc355c912d3526edfbd658dff25fbe31f9d1c9e
 //
 //
 //
