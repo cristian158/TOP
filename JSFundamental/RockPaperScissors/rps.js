@@ -35,6 +35,7 @@ function playerPlay(){
 }
 
 // match
+// #### alert(), prompt(), confirm() are DYING ####
 function playRound(playerSelection, computerSelection){
 	if (playerSelection == 'Rock' && computerSelection == 'Rock'){
 		alert('Tie!')
