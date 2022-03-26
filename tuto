@@ -1,0 +1,34 @@
+### PREREQUISITES
+## Install curl
+	$ sudo apt install curl
+
+## Insatll nvm
+	$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+## Initialize nvm
+	$ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+	$ [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+## Verify nvm
+	$ command -v nvm
+
+### INSTALL NODE
+## Most recent stable version
+	$ nvm install --lts
+
+## Tell nvm which version of Node to use 
+	$ nvm use --lts	
+
+## Verify node version
+	$ node -v
+
+## now with node, we run the node console, and with .exit to quit
+
+## Install Jest
+	$ cd javascript-exercise
+	$ npm install
+
+## Run exercises
+	$ cd 01_helloWorld
+	$ npm test helloWorld.spec.js
+

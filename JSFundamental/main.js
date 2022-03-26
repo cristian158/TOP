@@ -360,3 +360,90 @@
 // // do...while
 //
 //
+//
+// ///////////////////////////
+// //	REVERSE A STRING    // 
+// ///////////////////////////
+//
+// const reverse = function (str) {
+//	var splits = str.split("")
+//	var revs = splits.reverse()
+//	var joins = revs.join("")
+//	return joins
+// }
+// reverse("ajoasd")	// returns "dsaoja"
+//
+//
+// const revStr = function(str){
+//	return str.split("").reverse().join("")
+// }
+// revStr("ajoasd")	// returns "dsaoja"
+//
+//
+// ///////////////////////////////
+// /// REPEAT A STRING X TIMES ///
+// ///////////////////////////////
+// 
+// const repeat = function(str, num){
+// 	if (num < 0){
+//		return 'ERROR'
+//	} else {
+//		return string.repeat(num
+//	}
+// }
+// repeat('hey', 4)	// returns 'hey hey hey hey '
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
